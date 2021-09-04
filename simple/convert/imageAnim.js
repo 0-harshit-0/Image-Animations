@@ -5,7 +5,7 @@ let s = new Shapes(ctx);
 canvas.width = innerWidth;
 canvas.height = innerHeight;
 
-var store1 = [], range = 1;
+var store1 = [], range = 5;
 addEventListener('keypress', (e)=> {
 	if (e.key == 'a') {
 
