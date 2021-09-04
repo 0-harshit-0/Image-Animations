@@ -15,6 +15,7 @@ addEventListener('keypress', (e)=> {
 			console.log(1)
 		}
 	}
+	animation();
 });
 addEventListener('resize', function(e) {
 	canvas.width = innerWidth;
@@ -74,9 +75,10 @@ function imgLoad() {
 }
 img.onload = () => {
 	imgLoad();
+	animation();
 };
 
-(function animation() {
+function animation() {
 	ctx.setTransform(1, 0, 0, 1, 0, 0);
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -84,5 +86,4 @@ img.onload = () => {
 		balls.update();
 	});
 
-	requestAnimationFrame(animation);
-})();
+}
